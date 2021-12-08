@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#D3127F</color>
+    <color name="colorPrimaryDark">#333E48</color>
+    <color name="colorAccent">#D3127F</color>
+    <color name="colorWhite">#ffffff</color>
+
+    <!--    TODO : custom Toast-->
+    <color name="defaultTextColor">#FFFFFF</color>
+    <color name="errorColor">#D50000</color>
+    <color name="infoColor">#3F51B5</color>
+    <color name="normalColor">#353A3E</color>
+    <color name="successColor">#388E3C</color>
+    <color name="warningColor">#FFA900</color>
+
+
+    <!--   TODO : custom stateFullLayout-->
+    <color name="stfImageColor">#EA6D6D</color>
+
+</resources>

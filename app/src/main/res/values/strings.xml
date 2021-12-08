@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">مدبلج توب</string>
+
+    <string name="play_list">قائمة التشغيل</string>
+    <string name="videos">الفيديوهات</string>
+    <string name="connection_error">Server connection error</string>
+
+
+    <string name="time_ago_prefix">قبل</string>
+    <string name="time_ago_suffix">مضت</string>
+    <string name="time_ago_seconds">ثوانى</string>
+    <string name="time_ago_minute">دقيقة</string>
+    <string name="time_ago_minutes">دقائق</string>
+    <string name="time_ago_hour">ساعة</string>
+    <string name="time_ago_hours">ساعات</string>
+    <string name="time_ago_day">يوم</string>
+    <string name="time_ago_days">أيام</string>
+    <string name="time_ago_month">شهر</string>
+    <string name="time_ago_months">أشهر</string>
+    <string name="time_ago_year">سنة</string>
+    <string name="time_ago_years">سنوات</string>
+
+</resources>

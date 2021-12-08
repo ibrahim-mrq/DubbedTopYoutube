@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">library</string>
+
+    <string name="stfButtonText">أعد المحاولة</string>
+    <string name="stfEmptyMessage">لا يوجد عناصر</string>
+    <string name="stfErrorMessage">لقد حدث خطأ، رجاء أعد المحاولة لاحقا</string>
+    <string name="stfLoadingMessage">جار التحميل..</string>
+    <string name="stfLocationOffMessage">الرجاء تمكين خدمات الموقع</string>
+    <string name="stfOfflineMessage">يرجى التحقق من اتصالك بالانترنت</string>
+
+    <string name="toast_message">Toast message</string>
+
+</resources>
