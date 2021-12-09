@@ -29,7 +29,6 @@ public class TimeAgo {
 
         String prefix = r.getString(R.string.time_ago_prefix);
 //        String suffix = r.getString(R.string.time_ago_suffix);
-//        String prefix = "";
         String suffix = "";
 
         double seconds = Math.abs(diff) / 1000;

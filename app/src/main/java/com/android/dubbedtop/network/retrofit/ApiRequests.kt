@@ -58,7 +58,9 @@ class ApiRequests {
                 Constants.TYPE_PART_SNIPPET,
                 Constants.TYPE_KEY,
                 Constants.TYPE_CHANNEL_ID,
-                50,
+                Constants.TYPE_ORDER,
+                Constants.TYPE,
+                Constants.TYPE_MAX_RESULTS_VIDEOS,
                 pageToken,
             )
             Log.e("RESPONSE", response.toString());

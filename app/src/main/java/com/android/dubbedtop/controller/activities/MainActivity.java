@@ -1,13 +1,10 @@
 package com.android.dubbedtop.controller.activities;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.viewpager.widget.ViewPager;
 
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 
 import com.android.dubbedtop.controller.adapter.TabAdapter;
 import com.android.dubbedtop.controller.fragments.PlayListFragment;
@@ -43,17 +40,43 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         ArrayList<TabClass> tabs = new ArrayList<>();
-//        tabs.add(new TabClass(getString(R.string.videos), VideosFragment.newInstance()));
-//        tabs.add(new TabClass(getString(R.string.play_list), PlayListFragment.newInstance()));
-
-        tabs.add(new TabClass(getString(R.string.videos), new VideosFragment()));
-        tabs.add(new TabClass(getString(R.string.play_list), new PlayListFragment()));
-
+        tabs.add(new TabClass(getString(R.string.videos), VideosFragment.newInstance(0)));
+        tabs.add(new TabClass(getString(R.string.play_list), PlayListFragment.newInstance()));
         TabAdapter adapter = new TabAdapter(getSupportFragmentManager(), tabs);
         viewPager.setAdapter(adapter);
         tabLayout.setupWithViewPager(viewPager);
         viewPager.setPageTransformer(true, new ZoomOutPageTransformer());
 
+        tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+                switch (tab.getPosition()) {
+                    case 0:
+                        VideosFragment.newInstance(0);
+                        break;
+                    case 1:
+//                        PlayListFragment.newInstance().recyclerView.smoothScrollToPosition(0);
+                        break;
+                }
+            }
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+                switch (tab.getPosition()) {
+                    case 0:
+                        VideosFragment.newInstance(0);
+                        break;
+                    case 1:
+//                        PlayListFragment.newInstance().recyclerView.smoothScrollToPosition(0);
+                        break;
+                }
+            }
+        });
     }
 
 //    @Override

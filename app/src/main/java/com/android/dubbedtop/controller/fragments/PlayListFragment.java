@@ -40,9 +40,9 @@ public class PlayListFragment extends BaseFragment
 
     private SwipeRefreshLayout swipeToRefresh;
     private StatefulLayout statefulLayout;
-    private RecyclerView recyclerView;
+    public RecyclerView recyclerView;
 
-    private PlayListAdapter adapter;
+    public PlayListAdapter adapter;
     private ArrayList<ListPlay> list = new ArrayList<>();
 
     private boolean loadingInProgress = false;

@@ -22,6 +22,8 @@ interface RetrofitService {
         @Query("part") part: String?,
         @Query("key") key: String?,
         @Query("channelId") channelId: String,
+        @Query("order") order: String,
+        @Query("type") type: String,
         @Query("maxResults") maxResults: Int?,
         @Query("pageToken") pageToken: String?,
     ): Response<SearchResponse>

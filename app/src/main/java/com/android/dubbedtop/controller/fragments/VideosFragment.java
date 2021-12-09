@@ -3,6 +3,7 @@ package com.android.dubbedtop.controller.fragments;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.widget.SearchView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -38,11 +39,20 @@ public class VideosFragment extends BaseFragment
     public VideosFragment() {
     }
 
-    public static VideosFragment newInstance() {
+    public static VideosFragment newInstance(int position) {
         VideosFragment fragment = new VideosFragment();
         Bundle args = new Bundle();
+        args.putInt("position", position);
         fragment.setArguments(args);
         return fragment;
+    }
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        if (getArguments() != null) {
+            position = getArguments().getInt("position");
+        }
     }
 
     private SwipeRefreshLayout swipeToRefresh;
@@ -56,6 +66,7 @@ public class VideosFragment extends BaseFragment
     private boolean isPaginationFinished = true;
     private String token = "";
     private Paginate pager;
+    private int position = 0;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -80,6 +91,7 @@ public class VideosFragment extends BaseFragment
         recyclerView.setLayoutManager(new LinearLayoutManager(requireActivity()));
         recyclerView.setAdapter(adapter);
         adapter.notifyDataSetChanged();
+        recyclerView.smoothScrollToPosition(position);
 
         pager = Paginate.with(recyclerView, this)
                 .setLoadingTriggerThreshold(3)
